@@ -30,4 +30,17 @@ factorial:
 
     # This is how you return from a function. You'll learn more about this later.
     # This should be the last line in your program.
+    # int i = 0, sum = 1;
+    # for (; i <= n; i++) sum *= i;
+
+initialize:
+    addi a1, x0, 1
+    addi a2, x0, 1
+
+loop:
+    mul a2, a1, a2 
+    addi a1, a1, 1
+    ble a1, a0, loop
+
+    mv a0, a2
     jr ra
